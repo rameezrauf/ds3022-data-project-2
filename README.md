@@ -145,19 +145,12 @@ For additional points, write a second data pipeline compatible with Apache Airfl
 
 Be sure that your DAG runs successfully within Airflow when you executed in your AWS EC2 instance. It should produce identical results to your Prefect flow, but the final "platform" message attribute you submit should be set to "airflow".
 
-If you would like to develop and test your Airflow DAG you have two options:
-
-1. Run the EC2 instance we created earlier. CD into the `airflow/` directory and run `docker compose up -d` to bring up Airflow. Within that directory there is a `dags/` directory where you should put your Python DAG(s).
-2. Run Airflow locally using [this repository](https://github.com/uvasds-systems/run-airflow) and instructions. Just as the option above, place your Python DAG(s) in the `dags/` subdirectory to run/test them.
-
-[![Run Airflow](https://s3.amazonaws.com/uvasds-systems/images/run-airflow-youtube.png)](https://www.youtube.com/watch?v=muofVU8gkEQ)
-
 ## Notes / Submission
 
 1. Be sure to fork this repository and commit/push your code back to it for grading.
-2. Your Prefect flow should be saved to a file named `prefect-flow.py`.
+2. Your Prefect flow should be saved to a file named `prefect.py`.
 3. When running your Prefect flow you may use the remote host profile we set up in class `[profiles.uvasds]`, or  `[profiles.local]`. Either is fine.
-4. If you attempt to write an Airflow DAG that should be saved to a file named `airflow-dag.py`.
+4. If you attempt to write an Airflow DAG that should be saved to a file named `airflow.py`.
 5. Secondary Prefect flows or Airflow DAGs are permissible. That is, one flow may also trigger another flow; one DAG may call another DAG, etc.
 6. Your code should log using the built-in logging methods for either Prefect or Airflow. You do not need to use a separate logging package. Do not save or commit log files to your repo.
 7. Do not save or commit any data or database files.
